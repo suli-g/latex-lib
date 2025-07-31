@@ -61,35 +61,22 @@ def _compile_to_latex_str(values: NumberArray) -> str:
                     for value in values
                 )
             )
-        case 3 if values.shape[-1] == 1:
+
+        case _ if values.ndim % 2 == 0:
             return BRACKETED_TEMPLATE.format(
                 values=HORIZONTAL_LIST_TEMPLATE.join(
-                    [
-                        _compile_to_latex_str(
-                            value.reshape(-1, value.shape[-1])
-                        )
-                        for value in values
-                    ]
+                    _compile_to_latex_str(value) for value in values
                 )
             )
-
-        case 3:
+        case _:
             return BRACKETED_TEMPLATE.format(
                 values=VERTICAL_LIST_TEMPLATE.join(
-                    HORIZONTAL_LIST_TEMPLATE.join(
-                        [
-                            _compile_to_latex_str(
-                                value
-                            )
-                            for value in sub_array
-                        ]
-                    )
-                    for sub_array in values
+                    _compile_to_latex_str(value) for value in values
                 )
             )
 
 
 if __name__ == "__main__":
-    test = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+    test = np.array([[[[[1], [2]], [[1], [2]]]], [[[[1], [2]], [[1], [2]]]]])
     print(test.shape)
-    print(compile_to_latex(test.reshape(3, 2, 2)))
+    print(compile_to_latex(test))
