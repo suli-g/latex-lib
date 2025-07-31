@@ -17,21 +17,18 @@ $$
     MATRIX_3_BY_2_BY_2 = r"""
 $$
 \begin{bmatrix}
-\begin{pmatrix}
-1 & 2
-\end{pmatrix} & \begin{pmatrix}
+\begin{bmatrix}
+1 & 2 \\
 3 & 4
-\end{pmatrix} \\
-\begin{pmatrix}
-5 & 6
-\end{pmatrix} & \begin{pmatrix}
+\end{bmatrix} \\
+\begin{bmatrix}
+5 & 6 \\
 7 & 8
-\end{pmatrix} \\
-\begin{pmatrix}
-9 & 10
-\end{pmatrix} & \begin{pmatrix}
+\end{bmatrix} \\
+\begin{bmatrix}
+9 & 10 \\
 11 & 12
-\end{pmatrix}
+\end{bmatrix}
 \end{bmatrix}
 $$
 """
