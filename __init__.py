@@ -8,3 +8,8 @@ Packages:
     - `utils` provides utility functions for working
       with arrays.
 """
+
+from .classes.latex_array import LatexArray
+from .utils.compile import compile_to_latex
+
+__all__ = ["LatexArray", "compile_to_latex"]
