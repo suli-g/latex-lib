@@ -28,5 +28,5 @@ PARENTHESIS_TEMPLATE = r"""\begin{{pmatrix}}
 HORIZONTAL_LIST_TEMPLATE = " & "
 """A string used to separate items in a horizontal list in LaTeX."""
 
-VERTICAL_LIST_TEMPLATE = " \\\\\n"
+VERTICAL_LIST_TEMPLATE = rf"\\{"\n"}"
 """A string used to separate items in a vertical list in LaTeX."""

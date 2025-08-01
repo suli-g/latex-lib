@@ -19,7 +19,7 @@ $$
     COL_VECTOR = r"""
 $$
 \begin{pmatrix}
-1 \\
+1\\
 3
 \end{pmatrix}
 $$
