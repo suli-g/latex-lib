@@ -19,3 +19,6 @@ Desktop.ini
 
 *.log
 debug.log
+
+.venv/
+*.ipynb
