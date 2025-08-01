@@ -36,7 +36,7 @@ class LatexArray(NDArrayOperatorsMixin, Latex):
         Updates the value of the array using the given method.
 
         Args:
-            method: A method that updates the value of an array and 
+            method: A method that updates the value of an array and
             returns the modified array.
 
         Returns:
@@ -47,6 +47,8 @@ class LatexArray(NDArrayOperatorsMixin, Latex):
         # Ensure the given method returns a NumPy array.
         if not isinstance(result, np.ndarray):
             raise ValueError("This method does not return a NumPy array.")
+
+        self.value = result
         return self
 
     _HANDLED_TYPES = (np.ndarray, numbers.Number, list, tuple)
