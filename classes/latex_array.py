@@ -32,7 +32,21 @@ class LatexArray(NDArrayOperatorsMixin, Latex):
     def update(
         self, method: Callable[[np.ndarray], np.ndarray], *args, **kwargs
     ) -> "LatexArray":
-        self.value = method(self.value, *args, **kwargs)
+        """
+        Updates the value of the array using the given method.
+
+        Args:
+            method: A method that updates the value of an array and 
+            returns the modified array.
+
+        Returns:
+            _description_
+        """
+        result: np.ndarray = method(self.value, *args, **kwargs)
+
+        # Ensure the given method returns a NumPy array.
+        if not isinstance(result, np.ndarray):
+            raise ValueError("This method does not return a NumPy array.")
         return self
 
     _HANDLED_TYPES = (np.ndarray, numbers.Number, list, tuple)
