@@ -1,17 +1,6 @@
 import numpy as np
 import numpy.typing as npt
-
-if __name__ != "__main__":
-    from .constants import (
-        BRACKETED_TEMPLATE,
-        PARENTHESIS_TEMPLATE,
-        HORIZONTAL_LIST_TEMPLATE,
-        VERTICAL_LIST_TEMPLATE,
-        INLINE_TEMPLATE,
-        MULTILINE_TEMPLATE,
-    )
-else:
-    from constants import (
+from .constants import (
         BRACKETED_TEMPLATE,
         PARENTHESIS_TEMPLATE,
         HORIZONTAL_LIST_TEMPLATE,
@@ -20,17 +9,14 @@ else:
         MULTILINE_TEMPLATE,
     )
 
-type NumberArray = npt.NDArray[np.number]
-type LatexArray = str
 
-
-def compile_to_latex(array: npt.NDArray[np.number]) -> str:
+def compile_to_latex(array: npt.NDArray) -> str:
     if array.ndim == 0:
         return INLINE_TEMPLATE.format(value=array.astype(str)[0])
     return MULTILINE_TEMPLATE.format(value=_compile_to_latex_str(array))
 
 
-def _compile_to_latex_str(values: NumberArray) -> str:
+def _compile_to_latex_str(values: npt.NDArray) -> str:
     r"""
     Compiles the given NumPy array into a LaTeX string.
 
@@ -40,7 +26,7 @@ def _compile_to_latex_str(values: NumberArray) -> str:
     Returns:
         a string representation of the iterable
     """
-
+    
     match values.ndim:
         case 0:
             raise ValueError("Cannot compile a scalar to LaTeX.")
