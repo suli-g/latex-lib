@@ -6,5 +6,11 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "ipython>=9.4.0",
-    "numpy>=2.3.2",
+    "numpy>=2.3.2"
+]
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "nbconvert>=7.16.6",
+    "taskipy>=1.14.1",
 ]
