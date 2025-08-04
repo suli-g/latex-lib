@@ -15,11 +15,13 @@ class TestLatexArray(unittest.TestCase):
         """
         self.assertTrue(hasattr(self.array, "_repr_latex_"))
 
-    def test_implements_allows_math_operations(self):
+    def test_implements_math_operations(self):
         """
         Tests that the LatexArray class allows math operations.
         """
-        self.assertEqual(self.array + self.array, LatexArray([2, 4, 6]))
+        doubled = LatexArray([2, 4, 6])
+        self.assertTrue(np.all(doubled == self.array + self.array))
+        self.assertTrue(np.all(doubled == self.array * 2))
 
     def test_allows_numpy_instance_methods(self):
         """
@@ -32,3 +34,21 @@ class TestLatexArray(unittest.TestCase):
         Tests that the LatexArray class allows numpy class methods.
         """
         self.assertEqual(np.sum(self.array), 6)
+
+    def test_math_operations_return_latex_array(self):
+        """
+        Tests that math operations return a LatexArray object.
+        """
+        self.assertIsInstance(self.array + self.array, LatexArray)
+
+    def test_numpy_instance_methods_return_latex_array(self):
+        """
+        Tests that numpy instance methods return a LatexArray object.
+        """
+        self.assertIsInstance(self.array.sum(), LatexArray)
+
+    def test_numpy_class_methods_return_latex_array(self):
+        """
+        Tests that numpy instance methods return a LatexArray object.
+        """
+        self.assertIsInstance(np.sum(self.array), LatexArray)
