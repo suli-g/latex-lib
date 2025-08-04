@@ -1,107 +1,39 @@
-from collections.abc import Callable
-import numbers
-from typing import Iterable
+from typing import Sequence, Self
 from IPython.display import Latex
 import numpy as np
-from numpy.lib.mixins import NDArrayOperatorsMixin
+import numpy.typing as npt
 from utils.compile import compile_to_latex
 
 
-class LatexArray(NDArrayOperatorsMixin, Latex):
+class LatexArray(np.ndarray, Latex):
     """
-    Represents an array in LaTeX format.
+    Represents a NumPy array in LaTeX format.
+    Is rendered in a Jupyter notebook as LaTeX.
 
     Properties:
-        values: The values in the array.
+        input_array: The values in the array.
         data: The LaTeX representation of the array.
     """
 
-    def __init__(self, values: Iterable[np.object_]) -> None:
-        """
-        Initializes a new instance of LatexArray.
-
-        Args:
-            values: The values of the array.
-        """
-        self.value = np.array(values)
+    def __new__(cls: type[Latex], input_array: Sequence) -> npt.NDArray:
+        obj = np.asarray(input_array).view(cls)
+        return obj
 
     @property
-    def data(self):
-        return compile_to_latex(self.value)
-
-    def update(
-        self, method: Callable[[np.ndarray], np.ndarray], *args, **kwargs
-    ) -> "LatexArray":
+    def data(self: Self) -> str:
         """
-        Updates the value of the array using the given method.
-
-        Args:
-            method: A method that updates the value of an array and
-            returns the modified array.
+        The LaTeX representation of the array.
 
         Returns:
-            _description_
+            The LaTeX representation of the array.
         """
-        result: np.ndarray = method(self.value, *args, **kwargs)
+        return compile_to_latex(self)
 
-        # Ensure the given method returns a NumPy array.
-        if not isinstance(result, np.ndarray):
-            raise ValueError("This method does not return a NumPy array.")
-
-        self.value = result
-        return self
-
-    _HANDLED_TYPES = (np.ndarray, numbers.Number, list, tuple)
-
-    def __array_ufunc__[T, V](
-        self, ufunc, method, *inputs: T, **kwargs: dict[str, V]
-    ) -> "LatexArray":
+    @data.setter
+    def data(self, _):
         """
-        Handles ufunc operations on instances of LatexArray.
+        Does nothing.
 
-        This is explained in detail in the official documentation:
-        <https://numpy.org/doc/stable/reference/generated/numpy.ndarray.__array_ufunc__.html>
-
-        Args:
-            ufunc: The ufunc to handle.
-            method: The method to handle.
-            *inputs: The inputs to the ufunc.
-            **kwargs: The keyword arguments to the ufunc.
-
-        Returns:
-            The output of the given function.
+        Implemented so that the data getter could work correctly.
         """
-        out: T = kwargs.get("out", ())
-
-        for x in inputs + out:
-            # Only support operations with instances of
-            # _HANDLED_TYPES. Use ArrayLike instead of type(self)
-            # for isinstance to allow subclasses that don't
-            # override __array_ufunc__ to handle ArrayLike objects.
-            if not isinstance(x, self._HANDLED_TYPES + (self.__class__,)):
-                return NotImplemented
-
-        # Defer to the implementation of the ufunc
-        # on unwrapped values.
-        inputs = tuple(
-            x.value if isinstance(x, self.__class__) else x for x in inputs
-        )
-        if out:
-            kwargs["out"] = tuple(
-                x.value if isinstance(x, self.__class__) else x for x in out
-            )
-        result = getattr(ufunc, method)(*inputs, **kwargs)
-
-        if type(result) is tuple:
-            # multiple return values
-            return tuple(type(self)(x) for x in result)
-        elif method == "at":
-            # no return value
-            return None
-        else:
-            # one return value
-            return type(self)(result)
-
-
-if __name__ == "__main__":
-    print(1)
+        # Do nothing.
