@@ -8,7 +8,7 @@ Classes:
 from typing import Sequence, Self, cast
 from IPython.display import Latex
 import numpy as np
-from utils.compile import compile_to_latex
+from ..utils.compile import compile_to_latex
 
 
 class LatexArray[T](np.ndarray, Latex):

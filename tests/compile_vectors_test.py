@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from utils.compile import compile_to_latex
+from latex_lib.utils.compile import compile_to_latex
 
 
 class TestCompileVectorsToLatex(unittest.TestCase):

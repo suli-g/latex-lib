@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from classes.latex_array import LatexArray
+from latex_lib.classes.latex_array import LatexArray
 
 
 class TestLatexArray(unittest.TestCase):
