@@ -21,3 +21,4 @@ Desktop.ini
 debug.log
 
 .venv/
+./*.ipynb
