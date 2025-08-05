@@ -21,3 +21,6 @@ Desktop.ini
 debug.log
 
 .venv/
+./*.ipynb
+
+*.egg-info/
