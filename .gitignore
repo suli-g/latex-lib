@@ -21,6 +21,10 @@ Desktop.ini
 debug.log
 
 .venv/
-./*.ipynb
+.ipynb_checkpoints/
 
 *.egg-info/
+*.egg
+
+dist/
+build/
