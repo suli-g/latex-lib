@@ -28,3 +28,5 @@ debug.log
 
 dist/
 build/
+
+*.env
