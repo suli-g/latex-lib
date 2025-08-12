@@ -5,7 +5,7 @@ This package contains a class for simplifying representation of NumPy arrays usi
 ## Installation
 
 ```bash
-pip install latex-lib
+pip install -i https://test.pypi.org/simple/ latex-lib
 ```
 
 ## Usage
