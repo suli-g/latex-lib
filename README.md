@@ -25,18 +25,16 @@ array
 ```
 
 
-    ---------------------------------------------------------------------------
 
-    TypeError                                 Traceback (most recent call last)
 
-    Cell In[13], line 5
-          2 from latex_lib import LatexArray as Array
-          4 # Declare an array of 6 integers as a row vector.
-    ----> 5 array: Array = Array(range(6), shape=(2, 3))
-          6 array
-    
 
-    TypeError: LatexArray.__new__() got an unexpected keyword argument 'shape'
+$$
+\begin{pmatrix}
+0 & 1 & 2 & 3 & 4 & 5
+\end{pmatrix}
+$$
+
+
 
 
 ### Arithemtic Operations
