@@ -23,8 +23,7 @@ $$
 1 & 2 & 3 & 4\\
 5 & 6 & 7 & 8\\
 9 & 10 & 11 & 12
-\end{bmatrix}\\
-\begin{bmatrix}
+\end{bmatrix} & \begin{bmatrix}
 13 & 14 & 15 & 16\\
 17 & 18 & 19 & 20\\
 21 & 22 & 23 & 24
@@ -40,12 +39,10 @@ $$
 \begin{bmatrix}
 1 & 2\\
 3 & 4
-\end{bmatrix}\\
-\begin{bmatrix}
+\end{bmatrix} & \begin{bmatrix}
 5 & 6\\
 7 & 8
-\end{bmatrix}\\
-\begin{bmatrix}
+\end{bmatrix} & \begin{bmatrix}
 9 & 10\\
 11 & 12
 \end{bmatrix}
@@ -54,12 +51,10 @@ $$
 \begin{bmatrix}
 13 & 14\\
 15 & 16
-\end{bmatrix}\\
-\begin{bmatrix}
+\end{bmatrix} & \begin{bmatrix}
 17 & 18\\
 19 & 20
-\end{bmatrix}\\
-\begin{bmatrix}
+\end{bmatrix} & \begin{bmatrix}
 21 & 22\\
 23 & 24
 \end{bmatrix}
