@@ -26,49 +26,41 @@ def _compile_to_latex_str(values: npt.NDArray) -> str:
     Returns:
         a string representation of the iterable
     """
-
-    match values.shape:
-        case (_,):
-            return PARENTHESIS_TEMPLATE.format(
-                values=HORIZONTAL_LIST_TEMPLATE.join(values.astype(str))
+    # List 1-dimension items horizontally.
+    if values.ndim <= 1:
+        return PARENTHESIS_TEMPLATE.format(
+            values=HORIZONTAL_LIST_TEMPLATE.join(values.astype(str))
+        )
+    elif values.ndim <= 2 and values.shape[1] == 1:
+        # List 2-dimension items vertically if paired in subarrays.
+        return PARENTHESIS_TEMPLATE.format(
+            values=VERTICAL_LIST_TEMPLATE.join(values.flatten().astype(str))
+        )
+    elif values.ndim <= 2 and values.shape[0] == 1:
+        # List 2-dimension items horizontally if unpaired in subarrays.
+        return PARENTHESIS_TEMPLATE.format(
+            values=HORIZONTAL_LIST_TEMPLATE.join(values.flatten().astype(str))
+        )
+    elif values.ndim <= 2:
+        # Create a grid of both vertical and horizontal elements if
+        # there are mixed groups.
+        return BRACKETED_TEMPLATE.format(
+            values=VERTICAL_LIST_TEMPLATE.join(
+                HORIZONTAL_LIST_TEMPLATE.join(v.flatten())
+                for v in values.astype(str)
             )
-        case (_, 1):
-            return PARENTHESIS_TEMPLATE.format(
-                values=VERTICAL_LIST_TEMPLATE.join(
-                    values.flatten().astype(str)
-                )
+        )
+    elif values.ndim % 2 == 0:
+        # Stack pairs vertically.
+        return BRACKETED_TEMPLATE.format(
+            values=VERTICAL_LIST_TEMPLATE.join(
+                _compile_to_latex_str(value) for value in values
             )
-        case (_, _):
-            return BRACKETED_TEMPLATE.format(
-                values=VERTICAL_LIST_TEMPLATE.join(
-                    HORIZONTAL_LIST_TEMPLATE.join(value.flatten().astype(str))
-                    for value in values
-                )
+        )
+    else:
+        # Stack single subarrays horizontally.
+        return BRACKETED_TEMPLATE.format(
+            values=HORIZONTAL_LIST_TEMPLATE.join(
+                _compile_to_latex_str(value) for value in values
             )
-
-        case (1, _, _):
-            return BRACKETED_TEMPLATE.format(
-                values=HORIZONTAL_LIST_TEMPLATE.join(
-                    _compile_to_latex_str(value) for value in values
-                )
-            )
-        case (x, _, _):
-            return BRACKETED_TEMPLATE.format(
-                values=VERTICAL_LIST_TEMPLATE.join(
-                    _compile_to_latex_str(value) for value in values
-                )
-            )
-        case x if isinstance(x, tuple):
-            return BRACKETED_TEMPLATE.format(
-                values=VERTICAL_LIST_TEMPLATE.join(
-                    _compile_to_latex_str(value) for value in values
-                )
-            )
-        case _:
-            raise ValueError(f"Unsupported shape: {values.shape}")
-
-
-if __name__ == "__main__":
-    test = np.array([[[[[1], [2]], [[1], [2]]]], [[[[1], [2]], [[1], [2]]]]])
-    print(test.shape)
-    print(compile_to_latex(test))
+        )
