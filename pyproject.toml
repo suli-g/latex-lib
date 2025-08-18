@@ -1,6 +1,6 @@
 [project]
 name = "latex-lib"
-version = "0.2.1"
+version = "0.2.2"
 authors = [{ name = "Sulaiman Gafoor", email = "suligzus@gmail.com" }]
 description = "A package for allowing LaTeX array representations for NumPy array outputs in Jupyter Notebooks."
 readme = "README.md"
