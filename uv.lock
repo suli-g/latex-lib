@@ -951,11 +951,7 @@ wheels = [
 
 [[package]]
 name = "latex-lib"
-<<<<<<< Updated upstream
-version = "0.1.3"
-=======
 version = "0.2.2"
->>>>>>> Stashed changes
 source = { editable = "." }
 dependencies = [
     { name = "ipython" },

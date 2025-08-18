@@ -19,13 +19,8 @@ The `LatexArray` class can be used to handle NumPy arrays that need to displayed
 import numpy as np
 from latex_lib import LatexArray as Array
 
-<<<<<<< Updated upstream
-# Declare an array of 6 integers as a row vector.
-array: Array = Array(range(6))
-=======
 # Declare an array of 12 integers as a row vector.
 array: Array = Array(range(12))
->>>>>>> Stashed changes
 array
 ```
 
@@ -35,11 +30,7 @@ array
 
 $$
 \begin{pmatrix}
-<<<<<<< Updated upstream
-0 & 1 & 2 & 3 & 4 & 5
-=======
 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11
->>>>>>> Stashed changes
 \end{pmatrix}
 $$
 
@@ -63,11 +54,7 @@ which covers generally all operations.
 
 $$
 \begin{pmatrix}
-<<<<<<< Updated upstream
-0.4 & 2.4 & 4.4 & 6.4 & 8.4 & 10.4
-=======
 0.4 & 2.4 & 4.4 & 6.4 & 8.4 & 10.4 & 12.4 & 14.4 & 16.4 & 18.4 & 20.4 & 22.4
->>>>>>> Stashed changes
 \end{pmatrix}
 $$
 
@@ -95,9 +82,6 @@ $$
 2\\
 3\\
 4\\
-<<<<<<< Updated upstream
-5
-=======
 5\\
 6\\
 7\\
@@ -105,7 +89,6 @@ $$
 9\\
 10\\
 11
->>>>>>> Stashed changes
 \end{pmatrix}
 $$
 
@@ -126,14 +109,10 @@ $$
 \begin{bmatrix}
 0 & 1\\
 2 & 3\\
-<<<<<<< Updated upstream
-4 & 5
-=======
 4 & 5\\
 6 & 7\\
 8 & 9\\
 10 & 11
->>>>>>> Stashed changes
 \end{bmatrix}
 $$
 
@@ -153,7 +132,8 @@ np.where(array % 2 == 0, "Even", "Odd")
 
 
 
-    array(['Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')
+    array(['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd',
+           'Even', 'Odd', 'Even'], dtype='<U4')
 
 
 
@@ -169,7 +149,7 @@ Array(np.where(array % 2 == 0, "Even", "Odd"))
 
 $$
 \begin{pmatrix}
-Even & Odd & Even & Odd & Even & Odd
+Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even
 \end{pmatrix}
 $$
 
