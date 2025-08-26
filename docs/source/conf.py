@@ -8,7 +8,7 @@
 import sys
 from os import path
 
-sys.path.insert(0, path.abspath("../.."))
+sys.path.insert(0, path.abspath("../../src"))
 print(__file__)
 project = "latex-lib"
 copyright = "2025, Sulaiman Gafoor"

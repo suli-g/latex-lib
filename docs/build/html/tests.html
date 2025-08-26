@@ -14,7 +14,7 @@
 <link href="_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
 <link href="search.html" rel="search" title="Search"/>
 <link href="genindex.html" rel="index" title="Index"/>
-<link href="latex_lib.utils.html" rel="prev" title="latex_lib.utils package"/>
+<link href="modules.html" rel="prev" title="latex_lib"/>
 <script>
     <!-- Prevent Flash of wrong theme -->
       const userPreference = localStorage.getItem('darkMode');
@@ -70,7 +70,6 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current" x-data="{ expanded: $el.classList.contains('current') ? true : false }"><a :class="{ 'expanded' : expanded }" @click="expanded = !expanded" class="reference internal expandable" href="modules.html">latex_lib<button @click.prevent.stop="expanded = !expanded" type="button"><span class="sr-only"></span><svg fill="currentColor" height="18px" stroke="none" viewbox="0 0 24 24" width="18px" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></a><ul class="current" x-show="expanded">
-<li class="toctree-l2"><a class="reference internal" href="latex_lib.html">latex_lib package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">tests package</a></li>
 </ul>
 </li>
@@ -102,171 +101,27 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#submodules'">¶</a></h2>
 </section>
-<section id="module-tests.compile_matrix_test">
-<span id="tests-compile-matrix-test-module"></span><h2>tests.compile_matrix_test module<a class="headerlink" href="#module-tests.compile_matrix_test" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#module-tests.compile_matrix_test'">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.compile_matrix_test.</span></span><span class="sig-name descname"><span class="pre">TestCompileMatrixToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_matrix_test.html#TestCompileMatrixToLatex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex'">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_2_BY_2">
-<span class="sig-name descname"><span class="pre">MATRIX_2_BY_3_BY_2_BY_2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\n$$\n\\begin{bmatrix}\n\\begin{bmatrix}\n\\begin{bmatrix}\n1</span> <span class="pre">&amp;</span> <span class="pre">2\\\\\n3</span> <span class="pre">&amp;</span> <span class="pre">4\n\\end{bmatrix}\\\\\n\\begin{bmatrix}\n5</span> <span class="pre">&amp;</span> <span class="pre">6\\\\\n7</span> <span class="pre">&amp;</span> <span class="pre">8\n\\end{bmatrix}\\\\\n\\begin{bmatrix}\n9</span> <span class="pre">&amp;</span> <span class="pre">10\\\\\n11</span> <span class="pre">&amp;</span> <span class="pre">12\n\\end{bmatrix}\n\\end{bmatrix}\\\\\n\\begin{bmatrix}\n\\begin{bmatrix}\n13</span> <span class="pre">&amp;</span> <span class="pre">14\\\\\n15</span> <span class="pre">&amp;</span> <span class="pre">16\n\\end{bmatrix}\\\\\n\\begin{bmatrix}\n17</span> <span class="pre">&amp;</span> <span class="pre">18\\\\\n19</span> <span class="pre">&amp;</span> <span class="pre">20\n\\end{bmatrix}\\\\\n\\begin{bmatrix}\n21</span> <span class="pre">&amp;</span> <span class="pre">22\\\\\n23</span> <span class="pre">&amp;</span> <span class="pre">24\n\\end{bmatrix}\n\\end{bmatrix}\n\\end{bmatrix}\n$$\n'</span></em><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_2_BY_2" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_2_BY_2'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_4">
-<span class="sig-name descname"><span class="pre">MATRIX_2_BY_3_BY_4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\n$$\n\\begin{bmatrix}\n\\begin{bmatrix}\n1</span> <span class="pre">&amp;</span> <span class="pre">2</span> <span class="pre">&amp;</span> <span class="pre">3</span> <span class="pre">&amp;</span> <span class="pre">4\\\\\n5</span> <span class="pre">&amp;</span> <span class="pre">6</span> <span class="pre">&amp;</span> <span class="pre">7</span> <span class="pre">&amp;</span> <span class="pre">8\\\\\n9</span> <span class="pre">&amp;</span> <span class="pre">10</span> <span class="pre">&amp;</span> <span class="pre">11</span> <span class="pre">&amp;</span> <span class="pre">12\n\\end{bmatrix}\\\\\n\\begin{bmatrix}\n13</span> <span class="pre">&amp;</span> <span class="pre">14</span> <span class="pre">&amp;</span> <span class="pre">15</span> <span class="pre">&amp;</span> <span class="pre">16\\\\\n17</span> <span class="pre">&amp;</span> <span class="pre">18</span> <span class="pre">&amp;</span> <span class="pre">19</span> <span class="pre">&amp;</span> <span class="pre">20\\\\\n21</span> <span class="pre">&amp;</span> <span class="pre">22</span> <span class="pre">&amp;</span> <span class="pre">23</span> <span class="pre">&amp;</span> <span class="pre">24\n\\end{bmatrix}\n\\end{bmatrix}\n$$\n'</span></em><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_4" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_4'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_6_BY_4">
-<span class="sig-name descname"><span class="pre">MATRIX_6_BY_4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\n$$\n\\begin{bmatrix}\n1</span> <span class="pre">&amp;</span> <span class="pre">2</span> <span class="pre">&amp;</span> <span class="pre">3</span> <span class="pre">&amp;</span> <span class="pre">4\\\\\n5</span> <span class="pre">&amp;</span> <span class="pre">6</span> <span class="pre">&amp;</span> <span class="pre">7</span> <span class="pre">&amp;</span> <span class="pre">8\\\\\n9</span> <span class="pre">&amp;</span> <span class="pre">10</span> <span class="pre">&amp;</span> <span class="pre">11</span> <span class="pre">&amp;</span> <span class="pre">12\\\\\n13</span> <span class="pre">&amp;</span> <span class="pre">14</span> <span class="pre">&amp;</span> <span class="pre">15</span> <span class="pre">&amp;</span> <span class="pre">16\\\\\n17</span> <span class="pre">&amp;</span> <span class="pre">18</span> <span class="pre">&amp;</span> <span class="pre">19</span> <span class="pre">&amp;</span> <span class="pre">20\\\\\n21</span> <span class="pre">&amp;</span> <span class="pre">22</span> <span class="pre">&amp;</span> <span class="pre">23</span> <span class="pre">&amp;</span> <span class="pre">24\n\\end{bmatrix}\n$$\n'</span></em><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_6_BY_4" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_6_BY_4'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.VALUES">
-<span class="sig-name descname"><span class="pre">VALUES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">array([</span> <span class="pre">1,</span>  <span class="pre">2,</span>  <span class="pre">3,</span>  <span class="pre">4,</span>  <span class="pre">5,</span>  <span class="pre">6,</span>  <span class="pre">7,</span>  <span class="pre">8,</span>  <span class="pre">9,</span> <span class="pre">10,</span> <span class="pre">11,</span> <span class="pre">12,</span> <span class="pre">13,</span> <span class="pre">14,</span> <span class="pre">15,</span> <span class="pre">16,</span> <span class="pre">17,</span>        <span class="pre">18,</span> <span class="pre">19,</span> <span class="pre">20,</span> <span class="pre">21,</span> <span class="pre">22,</span> <span class="pre">23,</span> <span class="pre">24])</span></em><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.VALUES" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.VALUES'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.maxDiff">
-<span class="sig-name descname"><span class="pre">maxDiff</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">710</span></em><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.maxDiff" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.maxDiff'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix">
-<span class="sig-name descname"><span class="pre">test_compile_2_by_3_by_2_by_2_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_matrix_test.html#TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix'">¶</a></dt>
-<dd><p>Test to make sure that 3-by-3 matrices compile correctly.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix">
-<span class="sig-name descname"><span class="pre">test_compile_2_by_3_by_4_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_matrix_test.html#TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix'">¶</a></dt>
-<dd><p>Test to make sure that 3-by-3 matrices compile correctly.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_6_by_4_matrix">
-<span class="sig-name descname"><span class="pre">test_compile_6_by_4_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_matrix_test.html#TestCompileMatrixToLatex.test_compile_6_by_4_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_6_by_4_matrix" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_6_by_4_matrix'">¶</a></dt>
-<dd><p>Test to make sure that 3-by-4 matrices compile correctly.</p>
-</dd></dl>
-</dd></dl>
+<section id="tests-compile-matrix-test-module">
+<h2>tests.compile_matrix_test module<a class="headerlink" href="#tests-compile-matrix-test-module" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests-compile-matrix-test-module'">¶</a></h2>
 </section>
-<section id="module-tests.compile_vectors_test">
-<span id="tests-compile-vectors-test-module"></span><h2>tests.compile_vectors_test module<a class="headerlink" href="#module-tests.compile_vectors_test" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#module-tests.compile_vectors_test'">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="tests.compile_vectors_test.TestCompileVectorsToLatex">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.compile_vectors_test.</span></span><span class="sig-name descname"><span class="pre">TestCompileVectorsToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_vectors_test.html#TestCompileVectorsToLatex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_vectors_test.TestCompileVectorsToLatex" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_vectors_test.TestCompileVectorsToLatex'">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<p>Test class for compiling vectors to LaTeX,</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_vectors_test.TestCompileVectorsToLatex.COL_VECTOR">
-<span class="sig-name descname"><span class="pre">COL_VECTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\n$$\n\\begin{pmatrix}\n1\\\\\n3\n\\end{pmatrix}\n$$\n'</span></em><a class="headerlink" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.COL_VECTOR" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_vectors_test.TestCompileVectorsToLatex.COL_VECTOR'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="tests.compile_vectors_test.TestCompileVectorsToLatex.ROW_VECTOR">
-<span class="sig-name descname"><span class="pre">ROW_VECTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\n$$\n\\begin{pmatrix}\n1</span> <span class="pre">&amp;</span> <span class="pre">2</span> <span class="pre">&amp;</span> <span class="pre">3\n\\end{pmatrix}\n$$\n'</span></em><a class="headerlink" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.ROW_VECTOR" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_vectors_test.TestCompileVectorsToLatex.ROW_VECTOR'">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_column_vector">
-<span class="sig-name descname"><span class="pre">test_compile_column_vector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_vectors_test.html#TestCompileVectorsToLatex.test_compile_column_vector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_column_vector" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_column_vector'">¶</a></dt>
-<dd><p>Test to make sure that column-vectors compile correctly.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_row_vector">
-<span class="sig-name descname"><span class="pre">test_compile_row_vector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/compile_vectors_test.html#TestCompileVectorsToLatex.test_compile_row_vector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_row_vector" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_row_vector'">¶</a></dt>
-<dd><p>Test to make sure that row-vectors compile correctly.</p>
-</dd></dl>
-</dd></dl>
+<section id="tests-compile-vectors-test-module">
+<h2>tests.compile_vectors_test module<a class="headerlink" href="#tests-compile-vectors-test-module" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests-compile-vectors-test-module'">¶</a></h2>
 </section>
-<section id="module-tests.latex_array_test">
-<span id="tests-latex-array-test-module"></span><h2>tests.latex_array_test module<a class="headerlink" href="#module-tests.latex_array_test" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#module-tests.latex_array_test'">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.latex_array_test.</span></span><span class="sig-name descname"><span class="pre">TestLatexArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray'">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.setUp">
-<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.setUp" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.setUp'">¶</a></dt>
-<dd><p>Hook method for setting up the test fixture before exercising it.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_allows_numpy_class_methods">
-<span class="sig-name descname"><span class="pre">test_allows_numpy_class_methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_allows_numpy_class_methods"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_allows_numpy_class_methods" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_allows_numpy_class_methods'">¶</a></dt>
-<dd><p>Tests that the LatexArray class allows numpy class methods.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_allows_numpy_instance_methods">
-<span class="sig-name descname"><span class="pre">test_allows_numpy_instance_methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_allows_numpy_instance_methods"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_allows_numpy_instance_methods" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_allows_numpy_instance_methods'">¶</a></dt>
-<dd><p>Tests that the LatexArray class allows numpy instance methods.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_implements_math_operations">
-<span class="sig-name descname"><span class="pre">test_implements_math_operations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_implements_math_operations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_implements_math_operations" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_implements_math_operations'">¶</a></dt>
-<dd><p>Tests that the LatexArray class allows math operations.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_implements_repr_latex">
-<span class="sig-name descname"><span class="pre">test_implements_repr_latex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_implements_repr_latex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_implements_repr_latex" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_implements_repr_latex'">¶</a></dt>
-<dd><p>Tests that the LatexArray class can represent itself as LaTeX.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_math_operations_return_latex_array">
-<span class="sig-name descname"><span class="pre">test_math_operations_return_latex_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_math_operations_return_latex_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_math_operations_return_latex_array" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_math_operations_return_latex_array'">¶</a></dt>
-<dd><p>Tests that math operations return a LatexArray object.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_numpy_class_methods_return_latex_array">
-<span class="sig-name descname"><span class="pre">test_numpy_class_methods_return_latex_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_numpy_class_methods_return_latex_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_numpy_class_methods_return_latex_array" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_numpy_class_methods_return_latex_array'">¶</a></dt>
-<dd><p>Tests that numpy instance methods return a LatexArray object.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="tests.latex_array_test.TestLatexArray.test_numpy_instance_methods_return_latex_array">
-<span class="sig-name descname"><span class="pre">test_numpy_instance_methods_return_latex_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/latex_array_test.html#TestLatexArray.test_numpy_instance_methods_return_latex_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.latex_array_test.TestLatexArray.test_numpy_instance_methods_return_latex_array" title="Link to this definition" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests.latex_array_test.TestLatexArray.test_numpy_instance_methods_return_latex_array'">¶</a></dt>
-<dd><p>Tests that numpy instance methods return a LatexArray object.</p>
-</dd></dl>
-</dd></dl>
+<section id="tests-latex-array-test-module">
+<h2>tests.latex_array_test module<a class="headerlink" href="#tests-latex-array-test-module" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#tests-latex-array-test-module'">¶</a></h2>
 </section>
-<section id="module-tests">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#module-tests'">¶</a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#module-contents'">¶</a></h2>
 </section>
 </section>
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
 <div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
 <li><a :data-current="activeSection === '#submodules'" class="reference internal" href="#submodules">Submodules</a></li>
-<li><a :data-current="activeSection === '#module-tests.compile_matrix_test'" class="reference internal" href="#module-tests.compile_matrix_test">tests.compile_matrix_test module</a><ul>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex</span></code></a><ul>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_2_BY_2'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_2_BY_2"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_2_BY_2</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_4'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_4"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.MATRIX_2_BY_3_BY_4</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_6_BY_4'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.MATRIX_6_BY_4"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.MATRIX_6_BY_4</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.VALUES'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.VALUES"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.VALUES</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.maxDiff'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.maxDiff"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.maxDiff</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.test_compile_2_by_3_by_2_by_2_matrix()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.test_compile_2_by_3_by_4_matrix()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_6_by_4_matrix'" class="reference internal" href="#tests.compile_matrix_test.TestCompileMatrixToLatex.test_compile_6_by_4_matrix"><code class="docutils literal notranslate"><span class="pre">TestCompileMatrixToLatex.test_compile_6_by_4_matrix()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a :data-current="activeSection === '#module-tests.compile_vectors_test'" class="reference internal" href="#module-tests.compile_vectors_test">tests.compile_vectors_test module</a><ul>
-<li><a :data-current="activeSection === '#tests.compile_vectors_test.TestCompileVectorsToLatex'" class="reference internal" href="#tests.compile_vectors_test.TestCompileVectorsToLatex"><code class="docutils literal notranslate"><span class="pre">TestCompileVectorsToLatex</span></code></a><ul>
-<li><a :data-current="activeSection === '#tests.compile_vectors_test.TestCompileVectorsToLatex.COL_VECTOR'" class="reference internal" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.COL_VECTOR"><code class="docutils literal notranslate"><span class="pre">TestCompileVectorsToLatex.COL_VECTOR</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_vectors_test.TestCompileVectorsToLatex.ROW_VECTOR'" class="reference internal" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.ROW_VECTOR"><code class="docutils literal notranslate"><span class="pre">TestCompileVectorsToLatex.ROW_VECTOR</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_column_vector'" class="reference internal" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_column_vector"><code class="docutils literal notranslate"><span class="pre">TestCompileVectorsToLatex.test_compile_column_vector()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_row_vector'" class="reference internal" href="#tests.compile_vectors_test.TestCompileVectorsToLatex.test_compile_row_vector"><code class="docutils literal notranslate"><span class="pre">TestCompileVectorsToLatex.test_compile_row_vector()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a :data-current="activeSection === '#module-tests.latex_array_test'" class="reference internal" href="#module-tests.latex_array_test">tests.latex_array_test module</a><ul>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray'" class="reference internal" href="#tests.latex_array_test.TestLatexArray"><code class="docutils literal notranslate"><span class="pre">TestLatexArray</span></code></a><ul>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.setUp'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.setUp"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.setUp()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_allows_numpy_class_methods'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_allows_numpy_class_methods"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_allows_numpy_class_methods()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_allows_numpy_instance_methods'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_allows_numpy_instance_methods"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_allows_numpy_instance_methods()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_implements_math_operations'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_implements_math_operations"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_implements_math_operations()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_implements_repr_latex'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_implements_repr_latex"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_implements_repr_latex()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_math_operations_return_latex_array'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_math_operations_return_latex_array"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_math_operations_return_latex_array()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_numpy_class_methods_return_latex_array'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_numpy_class_methods_return_latex_array"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_numpy_class_methods_return_latex_array()</span></code></a></li>
-<li><a :data-current="activeSection === '#tests.latex_array_test.TestLatexArray.test_numpy_instance_methods_return_latex_array'" class="reference internal" href="#tests.latex_array_test.TestLatexArray.test_numpy_instance_methods_return_latex_array"><code class="docutils literal notranslate"><span class="pre">TestLatexArray.test_numpy_instance_methods_return_latex_array()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a :data-current="activeSection === '#module-tests'" class="reference internal" href="#module-tests">Module contents</a></li>
+<li><a :data-current="activeSection === '#tests-compile-matrix-test-module'" class="reference internal" href="#tests-compile-matrix-test-module">tests.compile_matrix_test module</a></li>
+<li><a :data-current="activeSection === '#tests-compile-vectors-test-module'" class="reference internal" href="#tests-compile-vectors-test-module">tests.compile_vectors_test module</a></li>
+<li><a :data-current="activeSection === '#tests-latex-array-test-module'" class="reference internal" href="#tests-latex-array-test-module">tests.latex_array_test module</a></li>
+<li><a :data-current="activeSection === '#module-contents'" class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </div>
 </aside>
