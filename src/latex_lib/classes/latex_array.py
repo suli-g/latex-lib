@@ -31,7 +31,7 @@ class LatexArray[T](np.ndarray, Latex):
         return obj
 
     def __str__(self: Self) -> str:
-        return compile_to_latex(self.data)
+        return compile_to_latex(self)
 
     @property
     def data(self: Self) -> str:
