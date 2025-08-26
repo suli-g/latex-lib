@@ -30,6 +30,9 @@ class LatexArray[T](np.ndarray, Latex):
         )
         return obj
 
+    def __str__(self: Self) -> str:
+        return compile_to_latex(self.data)
+
     @property
     def data(self: Self) -> str:
         """
@@ -38,7 +41,7 @@ class LatexArray[T](np.ndarray, Latex):
         Returns:
             The LaTeX representation of the array.
         """
-        return compile_to_latex(self)
+        return str(self)
 
     @data.setter
     def data(self, _):
