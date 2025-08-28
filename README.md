@@ -10,13 +10,14 @@ pip install -i https://test.pypi.org/simple/ latex-lib
 
 ## Usage
 
-The `LatexArray` class can be used to handle NumPy arrays that need to displayed.
+### Declaring an Array
+
+The `LatexArray` class can be used to handle NumPy arrays that need to be displayed in Jupyter notebooks.
 
 * This class subclasses the `Latex` class from IPython, which is what IPython uses when displaying the object in a Jupyter notebook as LaTeX.
 
 
 ```python
-import numpy as np
 from latex_lib import LatexArray as Array
 
 # Declare an array of 12 integers as a row vector.
@@ -27,13 +28,9 @@ array
 
 
 
-
-$$
 \begin{pmatrix}
 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11
 \end{pmatrix}
-$$
-
 
 
 
@@ -51,13 +48,9 @@ which covers generally all operations.
 
 
 
-
-$$
 \begin{pmatrix}
 0.4 & 2.4 & 4.4 & 6.4 & 8.4 & 10.4 & 12.4 & 14.4 & 16.4 & 18.4 & 20.4 & 22.4
 \end{pmatrix}
-$$
-
 
 
 
@@ -154,6 +147,31 @@ $$
 
 
 
+
+### Creating Expressions
+
+This can be used to constructor more complex Latex expressions.
+The `IPython.display.Latex` class can be used to create more complex Latex expressions.
+
+
+```python
+from IPython.display import Latex
+from latex_lib import LatexArray as Array
+
+# Declare an array of 12 integers as a row vector.
+array_a: Array = Array(range(12)).reshape(-1, 2)
+array_b: Array = Array(range(12)).reshape(2, -1) * 5
+
+Latex(rf"""$$
+      \begin{{align*}}
+      & \text{{Given matrices A and B, where: }}\\
+      & A = {array} && B = {array_b}\\
+      & \text{{The dot product can be obtained as: }}\\\\
+      & A \cdot B = {array_a} \cdot {array_b} \\
+      & = {array_a @ array_b}
+      \end{{align*}}
+      $$""")
+```
 
 ## Contributing
 
