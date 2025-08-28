@@ -8,7 +8,7 @@ Classes:
 from typing import Sequence, Self, cast
 from IPython.display import Latex
 import numpy as np
-from ..utils.compile import compile_to_latex
+from ..utils.compile import _compile_to_latex_str
 
 
 class LatexArray[T](np.ndarray, Latex):
@@ -31,7 +31,7 @@ class LatexArray[T](np.ndarray, Latex):
         return obj
 
     def __str__(self: Self) -> str:
-        return compile_to_latex(self)
+        return _compile_to_latex_str(self)
 
     @property
     def data(self: Self) -> str:
