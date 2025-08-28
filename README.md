@@ -67,8 +67,6 @@ array.reshape((-1, 1))
 
 
 
-
-$$
 \begin{pmatrix}
 0\\
 1\\
@@ -83,8 +81,6 @@ $$
 10\\
 11
 \end{pmatrix}
-$$
-
 
 
 
@@ -97,8 +93,6 @@ array.reshape(-1, 2)
 
 
 
-
-$$
 \begin{bmatrix}
 0 & 1\\
 2 & 3\\
@@ -107,8 +101,6 @@ $$
 8 & 9\\
 10 & 11
 \end{bmatrix}
-$$
-
 
 
 
@@ -118,6 +110,8 @@ Numpy functions and class methods are also generally supported (although, edge c
 
 
 ```python
+import numpy as np
+
 # NumPy functions work but do not return a LatexArray object.
 np.where(array % 2 == 0, "Even", "Odd")
 ```
@@ -125,8 +119,8 @@ np.where(array % 2 == 0, "Even", "Odd")
 
 
 
-    array(['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd',
-           'Even', 'Odd', 'Even'], dtype='<U4')
+    array(['Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even',
+           'Odd', 'Even', 'Odd'], dtype='<U4')
 
 
 
@@ -139,13 +133,9 @@ Array(np.where(array % 2 == 0, "Even", "Odd"))
 
 
 
-
-$$
 \begin{pmatrix}
-Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even
+Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd
 \end{pmatrix}
-$$
-
 
 
 
@@ -173,6 +163,43 @@ Latex(rf"""$$
       \end{{align*}}
       $$""")
 ```
+
+
+
+
+$$
+      \begin{align*}
+      & \text{Given matrices A and B, where: }\\
+      & A = \begin{pmatrix}
+0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11
+\end{pmatrix} && B = \begin{bmatrix}
+0 & 5 & 10 & 15 & 20 & 25\\
+30 & 35 & 40 & 45 & 50 & 55
+\end{bmatrix}\\
+      & \text{The dot product can be obtained as: }\\\\
+      & A \cdot B = \begin{bmatrix}
+0 & 1\\
+2 & 3\\
+4 & 5\\
+6 & 7\\
+8 & 9\\
+10 & 11
+\end{bmatrix} \cdot \begin{bmatrix}
+0 & 5 & 10 & 15 & 20 & 25\\
+30 & 35 & 40 & 45 & 50 & 55
+\end{bmatrix} \\
+      & = \begin{bmatrix}
+30 & 35 & 40 & 45 & 50 & 55\\
+90 & 115 & 140 & 165 & 190 & 215\\
+150 & 195 & 240 & 285 & 330 & 375\\
+210 & 275 & 340 & 405 & 470 & 535\\
+270 & 355 & 440 & 525 & 610 & 695\\
+330 & 435 & 540 & 645 & 750 & 855
+\end{bmatrix}
+      \end{align*}
+      $$
+
+
 
 ## Contributing
 
