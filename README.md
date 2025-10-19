@@ -34,6 +34,22 @@ array
 
 
 
+## String Representation
+
+The string representation of the array is its LaTeX representation.
+
+
+```python
+str(array)
+```
+
+
+
+
+    '\\begin{pmatrix}\n0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\n\\end{pmatrix}'
+
+
+
 ### Arithemtic Operations
 
 The class supports all arithmetic operations supported by `np.ndarray` (its superclass),
