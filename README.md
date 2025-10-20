@@ -28,9 +28,13 @@ array
 
 
 
+
+$$
 \begin{pmatrix}
 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11
 \end{pmatrix}
+$$
+
 
 
 
@@ -64,9 +68,13 @@ which covers generally all operations.
 
 
 
+
+$$
 \begin{pmatrix}
 0.4 & 2.4 & 4.4 & 6.4 & 8.4 & 10.4 & 12.4 & 14.4 & 16.4 & 18.4 & 20.4 & 22.4
 \end{pmatrix}
+$$
+
 
 
 
@@ -83,6 +91,8 @@ array.reshape((-1, 1))
 
 
 
+
+$$
 \begin{pmatrix}
 0\\
 1\\
@@ -97,6 +107,8 @@ array.reshape((-1, 1))
 10\\
 11
 \end{pmatrix}
+$$
+
 
 
 
@@ -109,6 +121,8 @@ array.reshape(-1, 2)
 
 
 
+
+$$
 \begin{bmatrix}
 0 & 1\\
 2 & 3\\
@@ -117,6 +131,8 @@ array.reshape(-1, 2)
 8 & 9\\
 10 & 11
 \end{bmatrix}
+$$
+
 
 
 
@@ -149,7 +165,13 @@ Array(np.where(array % 2 == 0, "Even", "Odd"))
 
 
 
-    '\\begin{pmatrix}\nEven & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd\n\\end{pmatrix}'
+
+$$
+\begin{pmatrix}
+Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd
+\end{pmatrix}
+$$
+
 
 
 
