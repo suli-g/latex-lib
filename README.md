@@ -149,9 +149,7 @@ Array(np.where(array % 2 == 0, "Even", "Odd"))
 
 
 
-\begin{pmatrix}
-Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd
-\end{pmatrix}
+    '\\begin{pmatrix}\nEven & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd & Even & Odd\n\\end{pmatrix}'
 
 
 
