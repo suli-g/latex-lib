@@ -8,7 +8,7 @@ Classes:
 from typing import Sequence, Self, cast
 from IPython.display import Latex
 import numpy as np
-from ..utils.compile import _compile_to_latex_str
+from ..utils.compile import _compile_to_latex_str, compile_to_latex
 
 
 class LatexArray[T](np.ndarray, Latex):
@@ -41,7 +41,7 @@ class LatexArray[T](np.ndarray, Latex):
         Returns:
             The LaTeX representation of the array.
         """
-        return str(self)
+        return compile_to_latex(self)
 
     @data.setter
     def data(self, _):
